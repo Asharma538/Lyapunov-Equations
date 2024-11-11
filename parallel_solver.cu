@@ -96,7 +96,7 @@ int main(){
     auto start = high_resolution_clock::now();
 
     Eigen::initParallel();
-    Eigen::RealSchur<MatrixXd> schur(A);
+    Eigen::initParallel::RealSchur<MatrixXd> schur(A);
     T = schur.matrixT();
     Q = schur.matrixU();
 
